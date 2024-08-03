@@ -2,3 +2,4 @@ data/
 output_samples/
 output_samples_2/
 non_degraded_samples/
+*.pyc
