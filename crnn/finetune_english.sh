@@ -1,0 +1,35 @@
+python3 finetune.py \
+--trainRoot /ssd_scratch/cvit/rafaelgetto/dataset/degraded/rain/coco_text_and_art/train/real/train \
+--valRoot /ssd_scratch/cvit/rafaelgetto/dataset/degraded/rain/coco_text_and_art/val \
+--datasetname coco_and_art \
+--pretrained ./crnn.pth \
+--lan english \
+--charlist /home2/rafaelgetto/crnn/new_files/charlist/crnn_english_char_list.txt \
+--batchSize 32 \
+--nepoch 15 \
+--cuda \
+--expr_dir /home2/rafaelgetto/crnn/new_files/outputs/english/rain_degraded_coco_and_art \
+--adadelta \
+--displayInterval 3300 \
+--valInterval 3300 \
+--manualSeed 1234 \
+--random_sample \
+--deal_with_lossnan;
+
+python3 finetune.py \
+--trainRoot /ssd_scratch/cvit/rafaelgetto/dataset/degraded/lowlight/coco_text_and_art/train/real/train \
+--valRoot /ssd_scratch/cvit/rafaelgetto/dataset/degraded/lowlight/coco_text_and_art/val \
+--datasetname coco_and_art \
+--pretrained ./crnn.pth \
+--lan english \
+--charlist /home2/rafaelgetto/crnn/new_files/charlist/crnn_english_char_list.txt \
+--batchSize 32 \
+--nepoch 15 \
+--cuda \
+--expr_dir /home2/rafaelgetto/crnn/new_files/outputs/english/lowlight_degraded_coco_and_art \
+--adadelta \
+--displayInterval 3300 \
+--valInterval 3300 \
+--manualSeed 1234 \
+--random_sample \
+--deal_with_lossnan;
